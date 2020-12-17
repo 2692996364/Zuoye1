@@ -25,7 +25,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     protected abstract void initData();
 
     protected abstract void initView();
-    
+
     protected abstract int getLayoutId();
 
     protected abstract P add();
