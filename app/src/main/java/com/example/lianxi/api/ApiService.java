@@ -1,7 +1,10 @@
 package com.example.lianxi.api;
 
+import java.util.HashMap;
+
 import io.reactivex.Observable;
 import okhttp3.ResponseBody;
+import retrofit2.http.FieldMap;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
@@ -14,4 +17,8 @@ public interface ApiService {
     @FormUrlEncoded
     @POST
     Observable<ResponseBody> post(@Url String url);
+
+    @FormUrlEncoded
+    @POST
+    Observable<ResponseBody> posts(@Url String url, @FieldMap HashMap<String, String> map);
 }
