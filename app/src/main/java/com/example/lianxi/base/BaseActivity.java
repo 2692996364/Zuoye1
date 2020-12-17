@@ -13,6 +13,7 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(getLayoutId());
+
         if (presenter == null) {
             presenter = add();
             presenter.attachView(this);
@@ -28,6 +29,6 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
 
     protected abstract int getLayoutId();
 
-    protected abstract P add();
+    public abstract P add();
 
 }

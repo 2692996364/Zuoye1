@@ -9,7 +9,7 @@ import com.example.lianxi.net.Callback;
 public class MainPresenter extends BasePresenter<MainContract.IMainView> implements MainContract.IMainPresenter {
     private MainContract.IMainModel mainModel;
 
-    public MainPresenter(MainContract.IMainModel mainModel) {
+    public MainPresenter(MainContract.IMainView mainView) {
         this.mainModel = new MainModel(this);
     }
 
